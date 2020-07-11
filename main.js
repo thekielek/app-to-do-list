@@ -33,4 +33,9 @@ const addTask = (e) => {
 
 }
 
+const searchTask = (e) => {
+    const searchText = e.target.value.toLowerCase();
+}
+
 form.addEventListener('submit', addTask);
+inputSearch.addEventListener('input', searchTask);
