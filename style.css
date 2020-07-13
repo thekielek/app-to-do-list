@@ -61,7 +61,6 @@ button.addTask:hover {
 
 div.taskList {
     display: flex;
-    margin-top: 2%;
     flex-wrap: wrap;
     flex-basis: 100%;
 }
@@ -70,7 +69,6 @@ div.task {
     margin-top: 2%;
     width: 78%;
     margin-right: 2%;
-    margin-bottom: 2%;
     padding: 20px 0 20px 20px;
     background-color: #30475e;
     color: white;
@@ -88,12 +86,13 @@ div.icon {
 }
 
 button.delate {
+    margin-top: 2%;
+
     border: none;
     padding: 15px;
     border-radius: 5px;
     text-transform: uppercase;
     width: 20%;
-    margin-bottom: 2%;
     background-color: #30475e;
     color: white;
 }
