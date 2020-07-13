@@ -67,6 +67,7 @@ div.taskList {
 }
 
 div.task {
+    margin-top: 2%;
     width: 78%;
     margin-right: 2%;
     margin-bottom: 2%;
