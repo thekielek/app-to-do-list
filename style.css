@@ -10,7 +10,7 @@ body {
 }
 
 body.active {
-    background-color: #929aab;
+    background-color: #84B6C1;
 }
 
 .main {
@@ -27,8 +27,8 @@ body.active {
     top: 30px;
     padding: 10px 10px 10px 10px;
     text-transform: uppercase;
-    background-color: #30475e;
-    color: white;
+    background-color: #ececec;
+    color: black;
     border: none;
 }
 
