@@ -2,6 +2,8 @@ const form = document.querySelector('form');
 const inputAdd = document.querySelector('input');
 const inputSearch = document.querySelector('input.search');
 const sectionTasks = document.querySelector('section.toDoList');
+const btnDarkLightMode = document.querySelector('button.darkLightMode');
+const main = document.body
 
 let tasks = [];
 
@@ -57,5 +59,10 @@ const searchTask = () => {
     showTasks(filteredTasks);
 }
 
+function darkLightMode() {
+    main.classList.toggle('active');
+}
+
 form.addEventListener('submit', addTask);
 inputSearch.addEventListener('input', searchTask);
+btnDarkLightMode.addEventListener('click', darkLightMode)
