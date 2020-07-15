@@ -3,9 +3,10 @@ const inputAdd = document.querySelector('input');
 const inputSearch = document.querySelector('input.search');
 const sectionTasks = document.querySelector('section.toDoList');
 const btnDarkLightMode = document.querySelector('button.darkLightMode');
-const main = document.body
+const main = document.body;
 
 let tasks = [];
+let taskElements = [];
 
 const addTask = (e) => {
     e.preventDefault();
@@ -18,9 +19,11 @@ const addTask = (e) => {
 
 const showTasks = (filtered) => {
     sectionTasks.innerHTML = '';
+    taskElements = [];
     const this_tasks = filtered || tasks;
     this_tasks.forEach((title, index) => {
-        taskTemplate(title, index);
+        const element = taskTemplate(title, index);
+        taskElements.push(element)
 
     });
 }
@@ -33,7 +36,7 @@ const taskTemplate = (title, index) => {
     // add div-task to div-taskList
     const task = document.createElement('div');
     task.classList.add('task')
-    task.innerHTML = title;
+    task.innerHTML = `${title}`;
     taskList.appendChild(task);
     // add button to taskList
     const del = document.createElement('button');
@@ -43,8 +46,9 @@ const taskTemplate = (title, index) => {
     // add function removeTask
     del.addEventListener('click', () => {
         deleteTask(index);
-    });
-}
+    })
+    return taskList
+};
 
 const deleteTask = (index) => {
     tasks.splice(index, 1);
@@ -61,6 +65,15 @@ const searchTask = () => {
 
 function darkLightMode() {
     main.classList.toggle('active');
+    taskElements.forEach((element) => {
+        const elementFirstChild = element.getElementsByClassName('task');
+        const elementLastChild = element.getElementsByClassName('delate');
+        console.log(elementFirstChild)
+        console.log(elementLastChild)
+        elementFirstChild[0].classList.toggle('active');
+        elementLastChild[0].classList.toggle('active');
+
+    })
 }
 
 form.addEventListener('submit', addTask);
