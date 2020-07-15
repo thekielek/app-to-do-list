@@ -68,8 +68,6 @@ function darkLightMode() {
     taskElements.forEach((element) => {
         const elementFirstChild = element.getElementsByClassName('task');
         const elementLastChild = element.getElementsByClassName('delate');
-        console.log(elementFirstChild)
-        console.log(elementLastChild)
         elementFirstChild[0].classList.toggle('active');
         elementLastChild[0].classList.toggle('active');
 
