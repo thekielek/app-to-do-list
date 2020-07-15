@@ -35,12 +35,22 @@ const taskTemplate = (title, index) => {
     sectionTasks.appendChild(taskList)
     // add div-task to div-taskList
     const task = document.createElement('div');
-    task.classList.add('task')
+    if (main.classList.contains('active')) {
+        task.classList.add('task');
+        task.classList.add('active');
+    } else {
+        task.classList.add('task');
+    }
     task.innerHTML = `${title}`;
     taskList.appendChild(task);
     // add button to taskList
     const del = document.createElement('button');
-    del.classList.add("delate");
+    if (main.classList.contains('active')) {
+        del.classList.add('delate');
+        del.classList.add('active');
+    } else {
+        del.classList.add('delate');
+    }
     del.innerHTML = `Usuń zadanie`
     taskList.appendChild(del);
     // add function removeTask
