@@ -77,8 +77,6 @@ button.addTask {
 }
 
 button.addTask:hover {
-    background-color: #30475e;
-    color: white;
     cursor: pointer;
 }
 
