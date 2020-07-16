@@ -115,6 +115,10 @@ div.task {
     border-radius: 5px;
 }
 
+div.task span {
+    text-decoration: underline;
+}
+
 div.task.active {
     background-color: white;
     color: #006666;
