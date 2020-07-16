@@ -75,6 +75,8 @@ const searchTask = () => {
 }
 
 function darkLightMode() {
+    label[0].classList.toggle('active');
+    label[1].classList.toggle('active');
     main.classList.toggle('active');
     taskElements.forEach((element) => {
         const elementFirstChild = element.getElementsByClassName('task');
