@@ -11,6 +11,7 @@ const btnAdd = document.querySelector('button.addTask');
 let tasks = [];
 let taskElements = [];
 
+
 const addTask = (e) => {
     e.preventDefault();
     if (!inputAdd.value) return alert('Nie wpisałeś żadnego zadania!')
@@ -44,7 +45,12 @@ const taskTemplate = (title, index) => {
     } else {
         task.classList.add('task');
     }
-    task.innerHTML = `${title}`;
+    const now = new Date();
+    const day = now.getDate()
+    const month = now.getMonth()
+    const year = now.getFullYear()
+    const date = `${day}.${month}.${year}`
+    task.innerHTML = `<span>${date}</span> ${title}`;
     taskList.appendChild(task);
     // add button to taskList
     const del = document.createElement('button');
@@ -92,7 +98,6 @@ function darkLightMode() {
 
     })
 }
-
 form.addEventListener('submit', addTask);
 inputSearch.addEventListener('input', searchTask);
 btnDarkLightMode.addEventListener('click', darkLightMode)
