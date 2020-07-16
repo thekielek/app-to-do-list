@@ -4,6 +4,7 @@ const inputSearch = document.querySelector('input.search');
 const sectionTasks = document.querySelector('section.toDoList');
 const btnDarkLightMode = document.querySelector('button.darkLightMode');
 const main = document.body;
+const label = document.getElementsByClassName('label');
 
 let tasks = [];
 let taskElements = [];
