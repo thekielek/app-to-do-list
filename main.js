@@ -5,6 +5,7 @@ const sectionTasks = document.querySelector('section.toDoList');
 const btnDarkLightMode = document.querySelector('button.darkLightMode');
 const main = document.body;
 const label = document.getElementsByClassName('label');
+const h1 = document.querySelector('h1');
 
 let tasks = [];
 let taskElements = [];
@@ -77,6 +78,7 @@ const searchTask = () => {
 function darkLightMode() {
     label[0].classList.toggle('active');
     label[1].classList.toggle('active');
+    h1.classList.toggle('active');
     main.classList.toggle('active');
     taskElements.forEach((element) => {
         const elementFirstChild = element.getElementsByClassName('task');
