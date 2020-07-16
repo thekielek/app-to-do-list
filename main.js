@@ -6,6 +6,7 @@ const btnDarkLightMode = document.querySelector('button.darkLightMode');
 const main = document.body;
 const label = document.getElementsByClassName('label');
 const h1 = document.querySelector('h1');
+const btnAdd = document.querySelector('button.addTask');
 
 let tasks = [];
 let taskElements = [];
@@ -81,6 +82,7 @@ function darkLightMode() {
     h1.classList.toggle('active');
     inputAdd.classList.toggle('active');
     inputSearch.classList.toggle('active');
+    btnAdd.classList.toggle('active');
     main.classList.toggle('active');
     taskElements.forEach((element) => {
         const elementFirstChild = element.getElementsByClassName('task');
