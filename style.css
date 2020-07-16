@@ -10,7 +10,7 @@ body {
 }
 
 body.active {
-    background-color: #84B6C1;
+    background-color: #dfeaea;
 }
 
 .main {
@@ -40,6 +40,10 @@ h1 {
     padding-bottom: 30px;
 }
 
+h1.active {
+    color: #006666;
+}
+
 form {
     margin: 0 auto;
     text-align: center;
@@ -51,6 +55,11 @@ input {
     border: none;
     width: 70%;
     border-radius: 5px;
+}
+
+input.addTask.active,
+input.search.active {
+    background-color: white;
 }
 
 .label {
@@ -67,6 +76,10 @@ input.search {
     width: 100%;
 }
 
+div.label.active {
+    color: #006666
+}
+
 button.addTask {
     width: 29%;
     background-color: white;
@@ -74,6 +87,11 @@ button.addTask {
     padding: 15px;
     border-radius: 5px;
     text-transform: uppercase;
+}
+
+button.addTask.active {
+    background-color: #006666;
+    color: white;
 }
 
 button.addTask:hover {
@@ -90,7 +108,7 @@ div.task {
     margin-top: 2%;
     width: 78%;
     margin-right: 2%;
-    padding: 20px 0 20px 20px;
+    padding: 20px 20px 20px 20px;
     background-color: #30475e;
     color: white;
     font-size: 15px;
@@ -99,7 +117,7 @@ div.task {
 
 div.task.active {
     background-color: white;
-    color: black;
+    color: #006666;
 }
 
 div.task:hover {
@@ -124,12 +142,9 @@ button.delate {
 
 button.delate:hover {
     cursor: pointer;
-
-
 }
 
 button.delate.active {
-    background-color: white;
-    color: black;
-
+    background-color: #006666;
+    color: white;
 }
