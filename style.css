@@ -103,8 +103,7 @@ div.task.active {
 }
 
 div.task:hover {
-    background-color: #ececec;
-    color: black;
+    cursor: pointer;
 }
 
 div.icon {
@@ -124,8 +123,8 @@ button.delate {
 }
 
 button.delate:hover {
-    background-color: white;
-    color: black;
+    cursor: pointer;
+
 
 }
 
