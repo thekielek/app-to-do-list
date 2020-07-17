@@ -22,9 +22,8 @@ body.active {
 
 
 .darkLightMode {
-    position: fixed;
-    top: 30px;
-    right: 30px;
+    position: static;
+    margin-bottom: 30px;
     padding: 10px 10px 10px 10px;
     text-transform: uppercase;
     background-color: #ececec;
@@ -47,6 +46,10 @@ h1.active {
 form {
     margin: 0 auto;
     text-align: center;
+}
+
+div.formular {
+    width: 100%;
 }
 
 input {
@@ -81,7 +84,7 @@ div.label.active {
 }
 
 button.addTask {
-    width: 29%;
+    width: 28%;
     background-color: white;
     border: none;
     padding: 15px;
@@ -169,7 +172,6 @@ button.delate.active {
     }
 
     div.formular {
-        display: inline-block;
         width: 100%;
     }
 
