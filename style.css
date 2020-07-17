@@ -153,7 +153,7 @@ button.delate.active {
     color: white;
 }
 
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .main {
         padding: 30px 30px 30px 30px;
         margin: 0 auto;
