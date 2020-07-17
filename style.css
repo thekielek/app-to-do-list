@@ -16,15 +16,15 @@ body.active {
 .main {
     padding: 30px 30px 30px 30px;
     margin: 0 auto;
-    width: 500px;
+    width: 40%;
 }
 
 
 
 .darkLightMode {
-    position: absolute;
-    right: 30px;
+    position: fixed;
     top: 30px;
+    right: 30px;
     padding: 10px 10px 10px 10px;
     text-transform: uppercase;
     background-color: #ececec;
@@ -151,4 +151,35 @@ button.delate:hover {
 button.delate.active {
     background-color: #006666;
     color: white;
+}
+
+@media (orientation: portrait) {
+    .main {
+        padding: 30px 30px 30px 30px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    button.addTask {
+        width: 28%;
+    }
+
+    div.formular {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .darkLightMode {
+        position: static;
+        margin-bottom: 30px;
+        padding: 10px 10px 10px 10px;
+        text-transform: uppercase;
+        background-color: #ececec;
+        color: black;
+        border: none;
+    }
 }
