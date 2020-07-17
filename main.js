@@ -19,6 +19,7 @@ const addTask = (e) => {
     tasks.push(inputAdd.value);
     form.reset();
     showTasks();
+    saveToLocalStorage()
 }
 
 const showTasks = (filtered) => {
@@ -71,6 +72,7 @@ const taskTemplate = (title, index) => {
 
 const deleteTask = (index) => {
     tasks.splice(index, 1);
+    saveToLocalStorage()
     showTasks();
 }
 
@@ -98,6 +100,21 @@ function darkLightMode() {
 
     })
 }
+
+function saveToLocalStorage() {
+    let str = JSON.stringify(tasks)
+    localStorage.setItem("todos", str)
+}
+
+function getTodos() {
+    let str = localStorage.getItem("todos")
+    tasks = JSON.parse(str)
+
+}
+
+getTodos();
+showTasks();
+
 form.addEventListener('submit', addTask);
 inputSearch.addEventListener('input', searchTask);
 btnDarkLightMode.addEventListener('click', darkLightMode)
