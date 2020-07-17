@@ -109,8 +109,8 @@ function saveToLocalStorage() {
 function getTodos() {
     let str = localStorage.getItem("todos")
     tasks = JSON.parse(str)
-    if (!todos) {
-        todos = [];
+    if (!tasks) {
+        tasks = [];
     }
 }
 
