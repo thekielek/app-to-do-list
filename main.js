@@ -113,7 +113,6 @@ function getTodos() {
 }
 
 getTodos();
-showTasks();
 
 form.addEventListener('submit', addTask);
 inputSearch.addEventListener('input', searchTask);
