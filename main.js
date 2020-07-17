@@ -61,7 +61,7 @@ const taskTemplate = (title, index) => {
     } else {
         del.classList.add('delate');
     }
-    del.innerHTML = `Usuń zadanie`
+    del.innerHTML = `Usuń`
     taskList.appendChild(del);
     // add function removeTask
     del.addEventListener('click', () => {
